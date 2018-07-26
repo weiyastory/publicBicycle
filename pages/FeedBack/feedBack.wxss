@@ -1,0 +1,28 @@
+.ui-feedback{
+ padding-top: 30rpx;
+}
+form{
+  font-size: 16px;
+}
+input{
+  height: 80rpx;
+  margin-bottom: 20rpx;
+  background: #fff;
+  padding-left: 5rpx;
+}
+textarea{
+  height: 700rpx;
+  background: #fff;
+  width: 100%;
+  padding: 5rpx;
+}
+button{
+  background: #05e1c9;
+  text-align: center;
+  color: #fff;
+  border-radius:10rpx;
+  width: 478rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin: 60rpx auto;
+}

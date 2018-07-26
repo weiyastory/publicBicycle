@@ -1,0 +1,20 @@
+<view class="user-container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+     <view class="accumulate-points">
+      <view class='int-text'>我的积分：{{integral}}分</view>
+    </view>
+    </block>
+  </view>
+  <view wx:for="{{pageData}}" wx:for-index="idx" wx:key='idx' wx:for-item="item" >
+    <view class="{{item.cls}}" bindtap='goOtherPage' data-userId='{{wx_id}}' data-index="{{idx}}">
+      <image class='img' src='{{item.img}}'></image>
+      <view class='ui-user-item'>{{item.name}}</view>
+      <image class='arrow' src='../../static/user_icon/arrow.jpg'></image>
+    </view>      
+  </view>
+    
+</view>
